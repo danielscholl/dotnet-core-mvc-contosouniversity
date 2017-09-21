@@ -1,0 +1,10 @@
+version: '3'
+services:
+
+  db:
+    image: microsoft/mssql-server-linux
+    environment:
+      ACCEPT_EULA: "Y"
+      SA_PASSWORD: "PasswordAzure@123"
+    ports:
+      - "1433:1433"
