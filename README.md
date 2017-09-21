@@ -28,11 +28,13 @@ dotnet restore
 
 ### Connection Strings
 
-```json
-"ConnectionStrings": {
+```javascript
+{
+  "ConnectionStrings": {
     "LocalDB": "Server=(localdb)\\mssqllocaldb;Database=ContosoUniversity1;Trusted_Connection=True;MultipleActiveResultSets=true",
     "DockerSQL": "Server=localhost,1433;;User Id=sa;password=PasswordAzure@123;Database=ContosoUniversity;MultipleActiveResultSets=true"
   }
+}
 ```
 
 >Make sure you use the correct DB Context in the startup.cs
@@ -47,6 +49,7 @@ services.AddDbContext<SchoolContext>(options => options.UseSqlite("Data Source=C
 
 ### Generator Commands
 
+```bash
 dotnet aspnet-codegenerator controller \
   -name StudentsController \
   -m Student \
@@ -54,3 +57,4 @@ dotnet aspnet-codegenerator controller \
   --relativeFolderPath Controllers \
   --useDefaultLayout \
   --referenceScriptLibraries
+```
